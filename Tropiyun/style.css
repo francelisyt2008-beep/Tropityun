@@ -1,0 +1,413 @@
+/* =========================
+   TROP IYUN - STYLE.CSS
+   ========================= */
+
+/* Google Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* COLORES */
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+
+  --text: #f8fafc;
+  --muted: rgba(248, 250, 252, 0.7);
+
+  --primary: #22c55e; /* verde */
+  --secondary: #facc15; /* amarillo */
+  --danger: #fb7185;
+
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* BODY */
+body {
+  background: radial-gradient(circle at top, #0f1b35, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 18, 32, 0.7);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.logo-text {
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* MENU */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+/* Botón mini */
+.btn-mini {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #07111f !important;
+  font-weight: 700;
+}
+
+/* Botón menú (celular) */
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  padding: 70px 0 40px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #081018;
+  font-weight: 800;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Badges */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.badge {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Imagen */
+.hero-image img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   SECCIONES
+   ========================= */
+.section {
+  padding: 70px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* =========================
+   MENU LISTA SABORES
+   ========================= */
+.sabores {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.sabores li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.sabores li:hover {
+  transform: translateY(-3px);
+  border-color: rgba(250, 204, 21, 0.4);
+}
+
+/* =========================
+   IMPORTANTE / PROMO
+   ========================= */
+.promo {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 197, 94, 0.07),
+    rgba(250, 204, 21, 0.05)
+  );
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.promo-text h2 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.promo-text p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* precios */
+.promo-price {
+  margin-top: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-price span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.promo-price strong {
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+/* Imagen promo */
+.promo-image img {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   UBICACION
+   ========================= */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.location-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.location-card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+.location-card p {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+/* =========================
+   CONTACTO
+   ========================= */
+.contact-card {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.contact-card h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  background: rgba(11, 18, 32, 0.85);
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.small {
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .promo-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-badges {
+    justify-content: center;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
